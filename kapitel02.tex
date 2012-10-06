@@ -1,0 +1,93 @@
+\chapter{Zweites Kapitel}
+
+Das hier ist ein Beispiel, wie die Hierarchie Chapter / Section / Subsection / Subsubsection / Paragraph dargestellt wird.
+
+\section{Section}
+
+Das hier ist etwas Fliesztext einer Section.
+Das hier ist etwas Fliesztext einer Section.
+Das hier ist etwas Fliesztext einer Section.
+Das hier ist etwas Fliesztext einer Section.
+
+\subsection{Subsection}
+
+Das hier ist etwas Fliesztext einer Subsection.
+Das hier ist etwas Fliesztext einer Subsection.
+Das hier ist etwas Fliesztext einer Subsection.
+Das hier ist etwas Fliesztext einer Subsection.
+Das hier ist etwas Fliesztext einer Subsection.
+
+\subsubsection{Subsubsection}
+
+Das hier ist etwas Fliesztext einer Subsubsection.
+Das hier ist etwas Fliesztext einer Subsubsection.
+Das hier ist etwas Fliesztext einer Subsubsection.
+Das hier ist etwas Fliesztext einer Subsubsection.
+Das hier ist etwas Fliesztext einer Subsubsection.
+Das hier ist etwas Fliesztext einer Subsubsection.
+
+\paragraph{Paragraph}
+
+Das hier ist etwas Fliesztext eines Paragraphs.
+Das hier ist etwas Fliesztext eines Paragraphs.
+Das hier ist etwas Fliesztext eines Paragraphs.
+Das hier ist etwas Fliesztext eines Paragraphs.
+Das hier ist etwas Fliesztext eines Paragraphs.
+Das hier ist etwas Fliesztext eines Paragraphs.
+
+\begin{itemize}
+\item Erster Punkt
+\item Zweiter Punkt
+\item Dritter Punkt
+\end{itemize}
+
+\begin{enumerate}
+\item Punkt
+\item Punkt
+\item Punkt
+\end{enumerate}
+
+\section{So wird BibLatex und Apacite benutzt}
+
+Hier kann nur ein sehr knappes Beispiel.
+Bitte die exzellente Dokumentation von ApaCite wenigstens überfliegen.
+
+\glqq{}Gesten sind kommunikative Bewegungen der Hände und Arme\grqq{}, so \Textcite[13]{Muller.1998}.
+
+Oder auch als Block. Das kommt ganz gut bei längeren Zitaten. Beispiel:
+
+\begin{quote}
+\glqq{}Ich kann tote Menschen sehen. Ich kann tote Menschen sehen. Ich kann tote Menschen sehen. Ich kann tote Menschen sehen. Ich kann tote Menschen sehen. Ich kann tote Menschen sehen. Ich kann tote Menschen sehen.\grqq{} \Parencites[1]{Muller.1998}[17]{Muller.1998}
+\end{quote}
+
+
+So bindet man ein Bild ein.
+Figur \ref{img_wikiversidad} wird nicht unbedingt genau dort eingebunden wo der Text steht, sondern irgendwo in der Nähe.
+Das ist natürlich alles konfigurierbar.
+
+\begin{figure}
+\begin{center}
+  \includegraphics[height=8cm]{Wikiversity-logo-es}
+\end{center}
+\caption{Logo der Wikiversität Spanien \parencite[23]{Muller.1998}}
+\label{img_wikiversidad}
+\end{figure}
+
+% und % beginnt einen kommentar, diese Zeile landet dann nicht in der PDF.
+% kann man gut nehmen um notizen zu machen im dokument:
+% TODO hier muss noch etwas sinnvolles her
+
+Tabellen sind etwas gewöhungsbedürftig finde ich, siehe Tabelle \ref{tab_beispiel1}.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{lll}
+Erste Spalte & Zweite Spalte & dritte Spalte \\
+Erste Spalte & Zweite Spalte & dritte Spalte \\
+Erste Spalte & Zweite Spalte & dritte Spalte \\
+\end{tabular}
+\end{center}
+\caption{Beispieltabelle \parencite[nach][2]{Muller.1998}}
+\label{tab_beispiel1}
+\end{table}
+

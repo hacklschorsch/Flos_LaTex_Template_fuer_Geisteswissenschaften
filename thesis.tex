@@ -1,0 +1,265 @@
+\documentclass[a4paper,12pt,pdftex,oneside,halfparskip]{scrreprt}
+
+% Font von http://www.tug.dk/FontCatalogue/garamond/
+% Zur Installation siehe auch (Shell-Befehl: "getnonfreefonts garamond classico")
+% http://my.opera.com/freedo/blog/2008/09/04/wie-kommt-die-garamond-ins-latex
+% und http://gael-varoquaux.info/computers/garamond/index.html
+\usepackage[garamond]{}
+\linespread {1.08}   % Garamond needs more leading (space between lines)
+% you should never, ever, use the standards out-of-the-box T1 fonts with
+% pdfLaTeX, they look ugly.Always include the "lmodern" or "pslatex" package,
+% that uses much better postscript fonts.
+%\usepackage[lmodern]{}
+\usepackage[pslatex]{}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+% Schrifttypen umstellen,
+% http://my.opera.com/freedo/blog/2008/09/04/wie-kommt-die-garamond-ins-latex
+\renewcommand{\rmdefault}{ugm}
+\renewcommand{\sfdefault}{uop}
+\renewcommand{\ttdefault}{pcr}
+
+% Schriften benutzen geht mit sowas wie "\rmfamily":
+% {\rmfamily URW Garamond}
+% {\sffamily URW Classico a.k.a. Optima}
+% {\ttfamily URW Nimbus Mono a.k.a. Courier}
+
+
+\usepackage{csquotes}
+
+% apabackref=true ist kein APA style, aber praktisch 
+\usepackage[backend=biber, style=apa, apabackref=true, uniquename=false]{biblatex}
+\DeclareLanguageMapping{ngerman}{ngerman-apa}
+\addbibresource{thesis.bib}
+
+\usepackage{url}
+\usepackage[pdftex,
+		unicode=true,
+		colorlinks=false,
+		pdfborder={0 0 0},
+		pdfpagelabels=true,
+		hyperindex=true]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{makeidx}
+\usepackage{rotating}
+
+\usepackage{paralist}
+
+\usepackage[printonlyused]{acronym}
+\usepackage{xspace}
+
+% Set font to 'Optima' for title page(s)
+\renewcommand{\rmdefault}{uop}
+
+%% Define a new 'leo' style for the package that will use a smaller font.
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small}}}
+\makeatother
+%% Now actually use the newly defined style.
+\urlstyle{leo}
+
+\renewcommand{\arraystretch}{1.15}
+
+
+% Eigene Befehle definieren:
+\newcommand{\zB}{\mbox{z.\,B.}\xspace}
+\newcommand{\iTitle}{Über den Nutzen eines ausgereiften Textsatzsystems für Arbeiten mit mehr als fünf Seiten}
+\newcommand{\iAuthor}{Daniel Düsentrieb}
+
+
+\title{\iTitle{}}
+\author{\iAuthor{}}
+\date{\today}
+%\dedication{Für Mutti}
+
+%\definecolor{darkblue}{rgb}{0,0,.1}
+\hypersetup{
+%	colorlinks=false, 
+%	breaklinks=true, 
+%	linkcolor=darkblue,
+%	menucolor=darkblue,
+%	urlcolor=darkblue,
+%	citecolor=darkblue,
+    pdftitle={\iTitle{}},
+    pdfauthor={\iAuthor{}},
+    pdfsubject={Masterarbeit},  % subject of the document
+    pdfcreator={\iAuthor{}},  % creator of the document
+    pdfproducer={\iAuthor{}}, % producer of the document
+    pdfkeywords={Ein} {zwei} {Stichwörter}
+}
+
+\graphicspath{{images/}}
+
+% Keine "Schusterjungen"
+\clubpenalty = 10000
+% Keine "Hurenkinder"
+\widowpenalty = 10000 \displaywidowpenalty = 10000
+\setlength{\baselineskip}{3ex}     
+
+\makeindex
+
+
+% Trennvorschläge:
+\hyphenation{Donau-dampf-schiff}
+\hyphenation{con-ven-tion-al-ized}
+\hyphenation{Ge-sprächs-part-ners}
+\hyphenation{ei-nen}
+\hyphenation{nicht-re-dun-dan-te}
+\hyphenation{re-dun-dan-te}
+\hyphenation{pho-no-lo-gi-sche}
+
+
+
+
+\begin{document}
+
+  \pagestyle{empty}
+
+  \begin{center}
+
+  \bigskip \bigskip \bigskip 
+  \vspace{6.0cm} \ \\ % Uni Logo hier rein
+  \includegraphics[height=6cm]{images/Wikiversity-logo-es.pdf} \\
+  \vspace*{2.0cm}
+  {\huge \bf Wikiversität} \\
+  {\Large \bf Zentrum für Wikis und Versitäten} \\
+  \bigskip \bigskip \bigskip
+  {\Large \bf Fachgebiet des Lehrstuhls} \\
+  Dipl. M.A. angestreber Abschluss
+  \bigskip \bigskip \bigskip
+
+  {\Large Abschlussarbeit zur Erlangung des akademischen Grades (Grad hier einfügen)}\\
+   \bigskip\bigskip\bigskip
+  {\Large \iAuthor{}} \\
+  \bigskip\bigskip
+  \noindent\textbf{\Large 
+  {\iTitle{}}}
+
+  \end{center}
+
+\cleardoublepage
+
+  \begin{center}
+
+  \bigskip \bigskip \bigskip 
+  \vspace{6.0cm} \ \\ % Uni Logo hier rein
+  \vspace*{0.8cm}
+  {\huge \bf Wikiversität} \\
+  {\Large \bf Zentrum für Wikis und Versitäten} \\
+  \bigskip \bigskip \bigskip
+  {\Large \bf Fachgebiet des Lehrstuhls} \\
+  Dipl. M.A. angestreber Abschluss
+  \bigskip \bigskip \bigskip
+
+  {\Large Abschlussarbeit zur Erlangung des akademischen Grades (Grad hier einfügen)}\\
+   \bigskip\bigskip\bigskip
+  {\Large \iAuthor{}} \\
+
+Straßenstr. 123 \\
+80337 München \\
+e.mail@adresse.de\\
+Sechstes Fachsemester
+
+  \bigskip \bigskip
+
+  \noindent\textbf{\Large 
+  \iTitle{}}
+
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip
+
+  \vfill
+
+\begin{tabularx}{\textwidth}{Xr}
+ Erstgutachter: & Dr.\,Meister Eder\\
+ Zweitgutachter: & Dr.\,Michael Jackson\\
+ Datum: & 30. Juni 2012 \\
+
+\end{tabularx}
+\end{center}
+
+\newpage
+\ \\
+
+\renewcommand{\rmdefault}{ugm}
+\rmfamily
+
+\vfill
+
+Ich versichere, dass ich diese Masterarbeit selbständig verfasst und nur die angegebenen Quellen und Hilfsmittel verwendet habe. 
+
+\vspace{1.5cm}
+
+\begin{flushleft}\footnotesize
+\begin{tabular}{@{}p{0.3\linewidth}p{0.2\linewidth}>{\centering\arraybackslash}p{0.4\linewidth}}
+& & \\ \cline{3-3}
+& & Datum, Unterschrift \\ [4\baselineskip]
+\end{tabular}
+\end{flushleft}
+
+\newpage
+\ \\
+\vfill
+
+% Seitenzahlen (Ziffern), Seite 1 ab hier.
+\setcounter{page}{1}
+\pagenumbering{roman}
+\pagestyle{plain} % fancy
+
+
+\input{danksagung}
+
+
+
+\vspace{9.5cm}
+
+\cleardoublepage
+
+% input statt include, sonst kriegen wir eine seitenzahl.
+\input{abstract}
+\input{vorwort}
+
+
+\pagebreak
+
+%\setcounter{tocdepth}{3}  % wie tief soll das inhaltsverzeichnis so sein
+%\addtocontents{toc}
+\tableofcontents
+
+\cleardoublepage
+
+
+\KOMAoption{listof}{leveldown}
+\addchap*{Abbildungs- und Tabellenverzeichnis}
+\listoffigures
+\listoftables % Rausnehmen, falls es keine Tabelle gibt.
+\cleardoublepage
+
+
+% Seitenzahlen (Ziffern), Seite 1 ab hier.
+%\setcounter{page}{1}
+\pagenumbering{arabic}
+\pagestyle{plain} % fancy
+
+\include{einleitung}
+\include{kapitel02}
+\include{schluss}
+
+\cleardoublepage
+
+\appendix
+
+\clearpage
+
+\raggedright
+\printbibliography 
+
+\end{document}
