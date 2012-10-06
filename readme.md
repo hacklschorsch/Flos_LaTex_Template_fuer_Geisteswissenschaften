@@ -13,9 +13,13 @@ Weil ich damals zu lange nach einer modernen LaTeX-Vorlage gesucht habe die
   * Bissel schöne Typographie hat out-of-the-box
 
 habe ich mir vorgenommen, selber ein Template zu veröffentlichen, wenn die Arbeit abgeschlossen ist.
-Letztendlich sind wir bei BibLaTeX mit APAcite gelandet um die Zitate "richtig" machen zu können; BibLaTex ist überhaupt ziemlich super. Ein mit wenigen eigenen Optionen versehenes Koma-Script erledigt das mit der schönen Typographie, zusammen mit ein paar frei verfügbaren Schriften.
+Letztendlich sind wir bei BibLaTeX mit APAcite gelandet um die Zitate "richtig" machen zu können; BibLaTex ist überhaupt super. Ein mit wenigen eigenen Optionen genutztes Koma-Script erledigt das mit der schönen Typographie, zusammen mit ein paar frei verfügbaren, eleganten Schriften (Garamond & Optima).
 
-Die Abschlussarbeit wurde auf einem Laptop mit Windows XP und MikTex verfasst. MikTex sollte alle Pakete, die benötigt werden, selbst installieren können beim ersten Kompilieren. Evtl. gibt's am Anfang Probleme mit den Schriftarten. Der Quellcode enthält einen Link, der die Installation der Schriften Garamond und Optima beschreibt.
+Die Abschlussarbeit wurde auf einem Laptop mit Windows XP und MikTex verfasst. MikTex sollte alle Pakete, die benötigt werden, selbst installieren können beim ersten Kompilieren. Evtl. gibt's Probleme mit den Schriftarten. Der Quellcode enthält einen Link, der die Installation der Schriften Garamond und Optima beschreibt (siehe thesis.tex).
+
+Das "makefile" make.bat sollte auch unter unix-artigen Betriebssystemen laufen, wenn man es aufruft wie
+> bash make.bat
+:)
 
 Über Verbesserungsvorschläge -- oder noch besser, Patches oder gleich Pull-Requests -- freue ich mich sehr.
 
