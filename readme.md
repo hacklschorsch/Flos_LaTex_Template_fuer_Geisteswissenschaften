@@ -18,8 +18,7 @@ Letztendlich sind wir bei BibLaTeX mit APAcite gelandet um die Zitate "richtig" 
 Die Abschlussarbeit wurde auf einem Laptop mit Windows XP und MikTex verfasst. MikTex sollte alle Pakete, die benötigt werden, selbst installieren können beim ersten Kompilieren. Evtl. gibt's Probleme mit den Schriftarten. Der Quellcode enthält einen Link, der die Installation der Schriften Garamond und Optima beschreibt (siehe thesis.tex).
 
 Das "makefile" make.bat sollte auch unter unix-artigen Betriebssystemen laufen, wenn man es aufruft wie
-> bash make.bat
-:)
+> sh make.bat
 
 Über Verbesserungsvorschläge -- oder noch besser, Patches oder gleich Pull-Requests -- freue ich mich sehr.
 
