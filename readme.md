@@ -3,7 +3,7 @@ Flos LaTeX-Template für Arbeiten in den Geisteswissenschaften
 
 [**Demo-PDF** - so sieht die derzeitige Vorlage kompiliert aus.](https://github.com/hacklschorsch/Flos_LaTex_Template_fuer_Geisteswissenschaften/raw/master/thesis.pdf)
 
-Ich hab meiner Freundin geholfen ihre Abschlussarbeit (M.A. Sprechwissenschaften) in LaTeX zu verfassen.
+Ich hab meiner Freundin geholfen ihre Abschlussarbeit in LaTeX zu verfassen.
 Die Arbeit ist abgegeben und sieht IMHO ganz gut aus. Ich hoffe, dass ich sie bald hier verlinken kann.
 
 Weil ich damals zu lange nach einer modernen LaTeX-Vorlage gesucht habe die
