@@ -58,13 +58,7 @@
 % Set font to 'Optima' for title page(s)
 \renewcommand{\rmdefault}{uop}
 
-%% Define a new 'leo' style for the package that will use a smaller font.
-\makeatletter
-\def\url@leostyle{%
-  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small}}}
-\makeatother
-%% Now actually use the newly defined style.
-\urlstyle{leo}
+\def\UrlFont{\small}
 
 \renewcommand{\arraystretch}{1.15}
 
