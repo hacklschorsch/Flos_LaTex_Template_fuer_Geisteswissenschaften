@@ -10,7 +10,7 @@
 % pdfLaTeX, they look ugly.Always include the "lmodern" or "pslatex" package,
 % that uses much better postscript fonts.
 %\usepackage[lmodern]{}
-\usepackage[pslatex]{}
+%\usepackage[pslatex]{}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -42,7 +42,8 @@
 		pdfborder={0 0 0},
 		pdfpagelabels=true,
 		hyperindex=true]{hyperref}
-\usepackage{fancyhdr}
+\usepackage[automark]{scrlayer-scrpage}
+\KOMAoptions{headsepline}
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{booktabs}
@@ -115,9 +116,9 @@
 
 \begin{document}
 
-  \pagestyle{empty}
 
   \begin{center}
+  \thispagestyle{empty}
 
   \bigskip \bigskip \bigskip 
   \vspace{6.0cm} \ \\ % Uni Logo hier rein
@@ -206,7 +207,6 @@ Ich versichere, dass ich diese Masterarbeit selbständig verfasst und nur die an
 % Seitenzahlen (Ziffern), Seite 1 ab hier.
 \setcounter{page}{1}
 \pagenumbering{roman}
-\pagestyle{plain} % fancy
 
 
 \input{danksagung}
@@ -241,7 +241,6 @@ Ich versichere, dass ich diese Masterarbeit selbständig verfasst und nur die an
 % Seitenzahlen (Ziffern), Seite 1 ab hier.
 %\setcounter{page}{1}
 \pagenumbering{arabic}
-\pagestyle{plain} % fancy
 
 \include{einleitung}
 \include{kapitel02}
